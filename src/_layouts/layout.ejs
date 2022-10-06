@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTEX</title>
+    {{ meta }}
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script type="module" src="/_scss/style.js"></script>
+    {{ head }}
+  </head>
+  <body>
+
+    <%- include('_partials/header'); -%>
+
+    {{ content }}
+
+    <%- include('_partials/footer'); -%>
+
+    {{ script }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+        AOS.init({
+          // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+          duration: 500, // values from 0 to 3000, with step 50ms
+        });
+      });
+    </script>
+  </body>
+</html>

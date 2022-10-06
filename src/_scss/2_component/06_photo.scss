@@ -1,0 +1,199 @@
+/*------------------------------------------------------------
+c-photo
+------------------------------------------------------------*/
+.c-photo {
+    padding-top: 90px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 34px;
+
+        &--h2 {
+            margin-bottom: 10px;
+            letter-spacing: 0;
+        }
+
+        p {
+            line-height: 1.75;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    &__row {
+        max-width: 880px;
+        display: flex;
+        margin: auto;
+        padding: 39px 38px 17px 40px;
+        border: 1px solid #0080cc;
+
+        video {
+            width: 100%;
+            height: 560px;
+            object-fit: fill;
+        }
+    }
+
+    &__col {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin: 0 0 25px 20px;
+        padding-bottom: 1px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 120px;
+        }
+
+        &:hover>p {
+            opacity: 1;
+        }
+    }
+
+    &__pickup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 1.8rem;
+        color: #005384;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 100%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 17%;
+        transition: 0.5s ease-in-out;
+
+        &::before {
+            content: "";
+            background: url("/assets/img/icon_zoom.svg") top left no-repeat;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 41%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: 100%;
+        }
+    }
+
+    @include tab {
+        padding: 51px 0 0;
+
+        .l-container {
+            padding: 0 19px;
+        }
+
+        &__title {
+            margin-bottom: 35px;
+
+            &--h2 {
+                font-size: 3.4rem;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__row {
+            padding: 19px 20px 0;
+
+            video {
+                height: 462px;
+            }
+        }
+
+            &__item {
+                margin-bottom: 21px;
+
+                img {
+                    height: 99px;
+                }
+            }
+
+        &__pickup {
+            font-size: 1.4rem;
+
+            &::before {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    @include sp {
+        padding: 31px 0 0;
+
+        .l-container {
+            padding: 0 10px;
+        }
+
+        &__title {
+            margin-bottom: 35px;
+
+            &--h2 {
+                font-size: 2.4rem;
+                margin-bottom: 1px;
+                letter-spacing: -0.02em;
+            }
+
+            p {
+                font-size: 1.4rem;
+                text-align: center;
+                line-height: 1.64;
+            }
+        }
+
+        &__row {
+            padding: 9px 9px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            video {
+                height: 450px;
+                max-width: 335px;
+            }
+        }
+
+        &__col {
+            flex-basis: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__img {
+            margin-top: 15px;
+        }
+
+        &__inner {
+            justify-content: space-between;
+            max-width: 335px;
+            margin: auto;
+        }
+
+        &__item {
+            margin: 0 0 10px;
+            flex-basis: calc(50% - 5px);
+            max-width: calc(50% - 5px);
+        }
+    }
+}

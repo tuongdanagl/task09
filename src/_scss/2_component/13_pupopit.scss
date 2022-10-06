@@ -1,0 +1,249 @@
+/*------------------------------------------------------------
+Popup InterView
+------------------------------------------------------------*/
+.c-intervpp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1005;
+    padding: 46px 0 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0, 0);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+
+    &.is-openiv {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+
+    &__inner {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+        z-index: 101;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    &__box {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        border: 4px #0080cc solid;
+        padding: 38px 50px 35px 55px;
+        display: block;
+        background: #fff;
+        overflow-y: scroll;
+        display: none;
+    }
+
+    &__box::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &__box::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    &__box::-webkit-scrollbar-thumb {
+        background-color: #0080cc;
+        border-radius: 5px;
+        border: 0;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        color: #0080cc;
+        line-height: 1.75;
+        margin-bottom: 23px;
+        letter-spacing: 0.08em;
+        font-weight: normal;
+    }
+
+    &__01 {
+        display: flex;
+        justify-content: space-between;
+
+        &--img {
+            max-width: 290px;
+            width: 100%;
+            margin-right: 40px;
+
+            img {
+                height: 410px;
+                padding-top: 5px;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+        &--txt {
+            font-size: 2.4rem;
+            line-height: 1.25;
+            color: #fff;
+            background: #0080cc;
+            text-align: center;
+            padding: 10px 0;
+
+            span {
+                font-size: 1.6rem;
+                line-height: 1.9;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 513px;
+        width: 100%;
+
+        li {
+            margin-bottom: 25px;
+        }
+
+        li:last-child {
+            margin-bottom: 45px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            line-height: 1.67;
+            margin-bottom: 4px;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.9;
+            letter-spacing: 0.03em;
+        }
+    }
+
+    &__close {
+        display: flex;
+        justify-content: flex-end;
+
+        &--box {
+            position: relative;
+            top: 23px;
+            left: 35px;
+        }
+
+        &--01 {
+            background: #fff;
+            width: 10px;
+            height: 2px;
+            transform: translateY(-2px) rotate(45deg);
+        }
+
+        &--02 {
+            background: #fff;
+            width: 10px;
+            height: 2px;
+            transform: translateY(-4px) rotate(-45deg);
+        }
+
+        &--txt {
+            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 500;
+            max-width: 117px;
+            width: 100%;
+            background: #0080cc;
+            display: block;
+            text-align: center;
+            padding: 8px 0 8px 24px;
+            color: #fff;
+            border-radius: 9px;
+            margin-top: 3px;
+        }
+    }
+
+    @include tab {
+        padding: 25px 0;
+
+        &__inner {
+            width: 90%;
+        }
+
+        &__box {
+            padding: 25px 40px;
+        }
+    }
+
+    @include sp {
+        &__box {
+            border-width: 2px;
+            padding: 33px 14px 38px 19px;
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+            margin-bottom: 9px;
+        }
+
+        &__01 {
+            flex-wrap: wrap;
+
+            &--img {
+                max-width: 100%;
+                margin-right: 0;
+
+                img {
+                    height: 321px;
+                    object-position: 0 -6px;
+                }
+            }
+
+            &--txt {
+                line-height: 1.15;
+                padding: 13px 0 10px;
+                text-indent: -6px;
+            }
+        }
+
+        &__content {
+            max-width: 100%;
+            margin-top: 35px;
+
+            h3 {
+                font-size: 1.6rem;
+                letter-spacing: 0;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 1.58;
+                letter-spacing: 0.02em;
+            }
+
+            li {
+                margin-bottom: 31px;
+            }
+        }
+
+        &__close {
+            justify-content: center;
+            padding-right: 12px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+/*------------------------------------------------------------
+Company
+------------------------------------------------------------*/
+.c-company {
+    padding-top: 89px;
+    padding-bottom: 46px;
+
+    .c-htitle02 {
+        margin-bottom: 50px;
+    }
+
+    &__tbl {
+        tr {
+            line-height: 1.9;
+        }
+
+        th {
+            border: 1px #cbcbcb solid;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 0;
+            padding: 13px 0 9px 18px;
+            width: 30%;
+            background: #f7f7f7;
+            font-weight: normal;
+        }
+
+        td {
+            border: 1px #cbcbcb solid;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 0;
+            padding: 13px 0 11px 19px;
+            width: 673px;
+            padding-right: 40px;
+        }
+    }
+
+    @include tabonly {
+        .c-htitle02 {
+            font-size: 4.4rem;
+            margin-bottom: 27px;
+        }
+    }
+
+    @include tab {
+        padding-top: 49px;
+        padding-bottom: 59px;
+
+        &__tbl {
+            th {
+                padding: 14px 0 11px 20px;
+                width: 30.4%;
+            }
+
+            td {
+                padding: 14px 15px 15px 31px;
+                line-height: 1.79;
+            }
+
+            .u-tabsp,
+            .u-tabonly {
+                display: table-row;
+            }
+
+            &--tr1 {
+                td {
+                    padding: 7px 15px 8px 31px;
+                }
+            }
+        }
+    }
+
+    @include sp {
+        padding-top: 32px;
+        padding-bottom: 57px;
+
+        .c-htitle02 {
+            margin-bottom: 33px;
+        }
+
+        &__tbl {
+            th {
+                width: 100%;
+                display: inline-block;
+                padding: 7px 0 7px 10px;
+            }
+
+            td {
+                width: 100%;
+                display: inline-block;
+                padding: 6px 0 7px 10px;
+                line-height: 1.78;
+            }
+
+            &--tr1 td {
+                padding: 16px 12px 10px 9px;
+            }
+        }
+    }
+}

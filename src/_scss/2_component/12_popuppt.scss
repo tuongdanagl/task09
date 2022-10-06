@@ -1,0 +1,131 @@
+/*------------------------------------------------------------
+Popup Photo
+------------------------------------------------------------*/
+.c-photopp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1005;
+    padding: 46px 0 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0, 0);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    &__inner {
+        max-width: 960px;
+        width: 100%;
+        background: #fff;
+        border: 4px #0080cc solid;
+        text-align: center;
+        padding: 40px 40px 10px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+    @include tab {
+        &__inner {
+            width: 95%;
+            padding: 20px 20px 15px;
+        }
+    }
+    @include sp {
+        &__inner {
+            width: 90%;
+            padding: 34px 19px 26px;
+            border-width: 2px;
+        }
+    }
+}
+
+.c-opened {
+    &.c-photopp {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+
+    img {
+        width: 840px;
+        height: 600px;
+    }
+
+    @include sp {
+        img {
+            height: 224px;
+        }
+    }
+}
+
+@keyframes zoomOpen {
+    0% {
+        transform: scale(0, 0) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: scale(1, 1) translate(-50%, -50%);
+    }
+}
+
+.c-close {
+    cursor: pointer;
+    font-size: 1.6rem;
+    max-width: 117px;
+    width: 100%;
+    background: #0080cc;
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 9px;
+    margin: 40px auto 20px;
+    position: relative;
+    z-index: 101;
+
+    &__box {
+        &::before,
+        &::after {
+            content: "";
+            background: #fff;
+            width: 10px;
+            height: 2px;
+            transform: translateY(-2px) rotate(45deg);
+            position: absolute;
+            left: 25px;
+            top: calc(50% + 2px);
+        }
+
+        &::after {
+            transform: translateY(-4px) rotate(-45deg);
+            top: calc(50% + 4px);
+        }
+    }
+
+    &__text {
+        padding-left: 18px;
+    }
+
+    @include sp {
+        margin-top: 18px;
+    }
+}

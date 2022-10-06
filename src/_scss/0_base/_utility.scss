@@ -1,0 +1,60 @@
+///*------------------------------------------------------------
+// Anchor position
+//------------------------------------------------------------*/
+.u-pconly {
+    @include tab {
+        display: none;
+    }
+}
+
+.u-tabonly {
+    display: none;
+
+    @include tab {
+        display: block;
+    }
+    @include sp {
+        display: none !important;
+    }
+}
+
+.u-sponly {
+    display: none;
+
+    @include sp {
+        display: block;
+    }
+}
+
+.u-pcsp {
+    display: block;
+
+    @include tab {
+        display: none;
+    }
+
+    @include sp {
+        display: block;
+    }
+}
+
+.u-pctab {
+
+    @include sp {
+        display: none !important;
+    }
+}
+
+.u-tabsp {
+    display: none;
+
+    @include tab {
+        display: block;
+    }
+}
+
+.is-fixed {
+    overflow: hidden;
+    touch-action: none;
+    height: 100vh;
+}

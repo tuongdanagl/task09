@@ -1,0 +1,170 @@
+/*------------------------------------------------------------
+c-about
+------------------------------------------------------------*/
+.c-about {
+    position: relative;
+    padding: 100px 0 122px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1px;
+        bottom: 0;
+        width: 76.8%;
+        z-index: -1;
+        background-color: #0080cc;
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__col {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    &__inner {
+        padding: 9px 60px;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 23px;
+        line-height: 1.6;
+    }
+
+    &__txtin {
+        line-height: 1.75;
+        letter-spacing: 0.023em;
+        margin-bottom: 28px;
+        color: #fff;
+    }
+
+    &__img {
+        &--box {
+            display: block;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 19px;
+                right: 20px;
+                width: 100%;
+                height: 101%;
+                border: 2px #fff solid;
+            }
+        }
+
+        &--01 {
+            margin-bottom: 44px;
+        }
+    }
+
+    @include tab {
+        padding: 60px 0;
+
+        &::before {
+            width: 87.1%;
+        }
+
+        &__inner {
+            padding: 23px 28px 11px 0;
+            margin-left: -2px;
+        }
+
+        &__title {
+            margin-bottom: 9px;
+            margin-left: -3px;
+        }
+
+        &__img {
+            flex-basis: 43%;
+            max-width: 42.45%;
+
+            &--box {
+                height: 303px;
+
+                &::before {
+                    top: 17px;
+                    right: 17px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &--01 {
+                margin-bottom: 41px;
+            }
+        }
+
+        &__text {
+            flex-basis: 58%;
+            max-width: 100%;
+        }
+
+        &__txtin {
+            margin-bottom: 27px;
+        }
+    }
+    @include sp {
+        padding: 40px 0 23px;
+
+        &::before {
+            width: 97.5%;
+        }
+
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__text {
+            order: 2;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        &__img {
+            order: 1;
+            flex-basis: 100%;
+            max-width: 100%;
+
+            &--box {
+                height: auto;
+
+                &::before {
+                    top: 10px;
+                    right: 10px;
+                    height: 100%;
+                }
+            }
+
+            &--01 {
+                margin-bottom: 29px;
+            }
+
+            &--02 img {
+                transform: translateX(-3px);
+            }
+        }
+
+        &__inner {
+            margin-left: 0;
+            padding: 42px 0 11px;
+        }
+
+        &__title {
+            margin-left: 0;
+        }
+
+        &__txtin {
+            margin-bottom: 21px;
+            line-height: 1.59;
+        }
+    }
+}
