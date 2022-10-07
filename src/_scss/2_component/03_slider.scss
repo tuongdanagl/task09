@@ -84,22 +84,6 @@ c-slider
     }
 
     &__item {
-        &--img {
-            width: 100%;
-            height: 770px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            transition-duration: 10s;
-            transform: scale(1.3);
-            display: block;
-            opacity: 0;
-
-            img {
-                height: 100%;
-                width: 100%;
-            }
-        }
-
         &.anima &--i1 {
             animation: zoomin 10s infinite linear;
         }
@@ -113,13 +97,27 @@ c-slider
         }
     }
 
+    &__img {
+        width: 100%;
+        height: 770px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition-duration: 10s;
+        transform: scale(1.3);
+        display: block;
+        opacity: 0;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
     @include tab {
         margin-top: 124px;
 
-        &__item {
-            &--img {
-                height: 787px;
-            }
+        &__img {
+            height: 787px;
         }
 
         &__text {
@@ -158,10 +156,8 @@ c-slider
             width: 94.7%;
         }
 
-        &__item {
-            &--img {
-                height: 605px;
-            }
+        &__img {
+            height: 605px;
         }
 
         &__title {
