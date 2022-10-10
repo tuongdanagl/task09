@@ -97,10 +97,18 @@ $(document).ready(function(){
     $('body').toggleClass('is-fixed');
     
   });
+  if($(window).width() <= 767){
+    $('.c-navmn a').click(function(){
+      $('.c-header .c-navmn').toggleClass('is-open');
+      $('.c-header .c-navspbtn').toggleClass('is-active');
+      $('body').toggleClass('is-fixed');
+    });
+  }
+  
 
   // Open Popup Photo
   var imgPopup = $(".c-photopp");
-  var imgCont = $(".c-photo__inner li");
+  var imgCont = $(".c-photo__item");
   var popupImage = $(".c-photopp img");
   var overlay = $('.c-photopp__overlay');
   var closeBtn = $(".c-close");

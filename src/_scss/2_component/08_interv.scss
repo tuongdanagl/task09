@@ -2,7 +2,7 @@
 Inter view
 ------------------------------------------------------------*/
 .c-interv {
-    padding-top: 91px;
+    padding-top: 92px;
 
     &__row {
         margin-top: 52px;
@@ -12,7 +12,6 @@ Inter view
 
     &__col {
         flex-basis: 33%;
-
         max-width: 314px;
         position: relative;
         cursor: pointer;
@@ -55,6 +54,7 @@ Inter view
         font-size: 1.8rem;
         margin: 0 4px 4px;
         line-height: 1.47;
+        z-index: 10;
 
         &--02 {
             padding-left: 25px;
@@ -146,6 +146,7 @@ Inter view
 
         &__row {
             margin-top: 35px;
+            justify-content: space-between;
         }
 
         &__col {
@@ -188,7 +189,6 @@ Inter view
         }
 
         &__view {
-            max-height: 280px;
             top: 0;
             padding-top: 50px;
 
@@ -207,12 +207,12 @@ Inter view
             flex-wrap: wrap;
             padding: 0 10px;
             margin-top: 36px;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         &__col {
             flex-basis: 100%;
-            max-width: 335px;
+            max-width: 375px;
             padding-bottom: 0;
 
             &::before {

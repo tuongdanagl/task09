@@ -86,7 +86,7 @@ Inter view Message
             display: flex;
         }
 
-        &01 {
+        &--01 {
             margin-right: 101px;
             position: relative;
             width: 32px;
@@ -104,7 +104,7 @@ Inter view Message
             }
         }
 
-        &02 {
+        &--02 {
             letter-spacing: 0.02em;
             line-height: 1.9;
         }
@@ -133,22 +133,22 @@ Inter view Message
 
         &__right {
             flex-basis: 35.9%;
-            max-width: 35.9%;
+            max-width: 262px;
         }
 
-        &__txt--01 {
+        &__txt01 {
             font-size: 2rem;
             letter-spacing: 0.05em;
             margin-top: 3px;
             margin-bottom: 29px;
         }
 
-        &__txt--02 {
+        &__txt02 {
             font-size: 1.6rem;
             padding-right: 43px;
         }
 
-        &__txt--04 {
+        &__txt04 {
             margin-top: 15px;
             letter-spacing: 0.01em;
             line-height: 2.15;
@@ -163,6 +163,7 @@ Inter view Message
 
         &__box {
             padding: 8px 0 0;
+            justify-content: space-between;
         }
 
         &__img {
@@ -179,8 +180,8 @@ Inter view Message
         }
 
         &__text {
-            flex-basis: 66%;
-            max-width: 66%;
+            flex-basis: 52%;
+            max-width: 52%;
             padding-left: 41px;
             font-size: 2rem;
 
@@ -188,7 +189,7 @@ Inter view Message
                 margin-bottom: 4px;
             }
 
-            &01 {
+            &--01 {
                 line-height: 1.7;
                 margin-right: 69px;
                 width: 44px;
@@ -200,7 +201,7 @@ Inter view Message
                 }
             }
 
-            &02 {
+            &--02 {
                 line-height: 2;
                 margin-top: 2px;
             }
@@ -295,7 +296,7 @@ Inter view Message
             padding-left: 10px;
             margin-top: 19px;
 
-            &01 {
+            &--01 {
                 margin-right: 33px;
 
                 &::before {
@@ -305,7 +306,7 @@ Inter view Message
                 }
             }
 
-            &02 {
+            &--02 {
                 font-size: 1.4rem;
                 margin-top: 4px;
             }

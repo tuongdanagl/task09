@@ -14,20 +14,25 @@
 //============================================
 // breakpoint
 //============================================
-@mixin sp {
-    @media only screen and (max-width: 767px) {
-        @content;
-    }
-}
 
 @mixin tab {
-    @media only screen and (max-width: 1060px) {
+    @media only screen and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin  fixtab {
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
+}
+@mixin tabonly {
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
         @content;
     }
 }
 
-@mixin tabonly {
-    @media only screen and (max-width: 850px) and (min-width: 768px) {
+@mixin sp {
+    @media only screen and (max-width: 767px) {
         @content;
     }
 }

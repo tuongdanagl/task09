@@ -83,13 +83,7 @@
     box-sizing: border-box;
     user-select: none;
     user-select: none;
-    user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    user-select: none;
     touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .slick-track::before,
@@ -108,10 +102,6 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-    transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 

@@ -16,6 +16,16 @@
         flex-basis: 14.2%;
         max-width: 14.2%;
         padding-top: 8px;
+        position: relative;
+    }
+
+    &__txt {
+        position: absolute;
+        font-size: 1.2rem;
+        top: 41px;
+        left: 66px;
+        letter-spacing: -0.12em;
+        font-weight: bold;
     }
 
     .c-navmn {
@@ -74,16 +84,12 @@
 
         .c-btmenu {
             flex-basis: 25.4%;
-            max-width: 25.4%;
+            max-width: 157px;
             height: 50px;
 
             a {
                 font-size: 1.8rem;
                 padding: 9px 0 10px 20px;
-
-                &::before {
-                    left: 35px;
-                }
             }
         }
 
@@ -98,6 +104,12 @@
         &__copy {
             font-size: 1.2rem;
             padding: 7px 0 2px;
+        }
+
+        &__txt {
+            top: 32px;
+            left: 49px;
+            letter-spacing: -0.1em;
         }
     }
 
@@ -115,12 +127,6 @@
             max-width: 29%;
             padding-top: 2px;
 
-            span {
-                font-size: 0.8rem;
-                padding-left: 17px;
-                margin-top: -2px;
-                letter-spacing: -0.06em;
-            }
         }
 
         &__txt01 {

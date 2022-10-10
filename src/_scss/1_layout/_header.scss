@@ -16,16 +16,17 @@
     }
 
     &__logo {
-        width: 16%;
+        width: 22%;
         position: relative;
+        height: 50px;
+    }
 
-        span {
-            position: absolute;
-            font-size: 1.2rem;
-            top: 31px;
-            left: 50px;
-            letter-spacing: -0.12em;
-        }
+    &__txt {
+        position: absolute;
+        font-size: 1.2rem;
+        top: 33px;
+        left: 50px;
+        letter-spacing: -0.06em;
     }
 
     @include tab {
@@ -37,12 +38,12 @@
         &__logo {
             order: 1;
             width: 23%;
+            height: 42px;
+        }
 
-            span {
-                top: 32px;
-                left: 49px;
-                letter-spacing: -0.1em;
-            }
+        &__txt {
+            top: 33px;
+            left: 50px;
         }
     }
 
@@ -58,31 +59,29 @@
             img {
                 width: 122px;
             }
+        }
 
-            span {
-                top: 26px;
-                left: 31px;
-                font-size: 1rem;
-                letter-spacing: -0.09em;
-            }
+        &__txt {
+            top: 26px;
+            left: 32px;
+            font-size: 1rem;
         }
     }
 }
 
 .c-navmn {
-    max-width: 64.6%;
+    max-width: calc(78% - 229px);
     width: 100%;
     transform: translateY(2px);
     letter-spacing: 0.02em;
 
     ul {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     &__item {
         position: relative;
-        margin-left: 4.7%;
 
         a {
             font-size: 1.6rem;
@@ -120,10 +119,6 @@
         &--i1 {
             margin-left: 0 !important;
         }
-
-        &--i3 {
-            margin-left: 6.1%;
-        }
     }
 
     @include tab {
@@ -155,7 +150,7 @@
         padding: 35px 0;
         transform: scale(1, 0);
         transform-origin: top;
-        transition: 0.5s ease-in;
+        transition: scale 0.5s ease-in;
         z-index: 999;
 
         ul {
@@ -219,12 +214,12 @@
 
 .c-btmenu {
     line-height: 1.67;
-    max-width: 16%;
-    flex-basis: 16%;
+    max-width: 185px;
+    flex-basis: 100%;
     text-align: center;
     background: #0080cc;
     border-radius: 9px;
-    margin-left: 44px;
+    margin-left: 40px;
     height: 50px;
     position: relative;
     top: 2px;
@@ -252,8 +247,7 @@
 
     @include tab {
         order: 2;
-        max-width: 21.5%;
-        flex-basis: 21.5%;
+        max-width: 157px;
         height: 40px;
         margin-left: 0;
         top: -1px;
@@ -271,8 +265,7 @@
 
     @include sp {
         position: relative;
-        flex-basis: 34.5%;
-        max-width: 34.5%;
+        max-width: 122px;
         margin-right: 50px;
         height: 38px;
         top: -2px;
