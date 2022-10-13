@@ -298,13 +298,12 @@ Recruit
                 padding-top: 18px;
             }
 
-            &--01.is-active{
-                transform: scale(1.02, 1) translateX(4px);
-                z-index: 10;
+            &--01.is-active {
+                margin-right: -10px;
             }
 
-            &--02.is-active{
-                transform: scale(1.02, 1) translateX(-4px);
+            &--02.is-active {
+                margin-left: -10px;
             }
         }
 

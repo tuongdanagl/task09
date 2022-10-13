@@ -2,7 +2,6 @@
 c-slider
 ------------------------------------------------------------*/
 .c-slider {
-    margin-top: 80px;
     padding: 0;
     position: relative;
 
@@ -21,9 +20,15 @@ c-slider
         font-weight: normal;
         color: #fff;
         position: absolute;
-        top: -411px;
+        width: 89.5%;
+        top: 50%;
         left: 0;
+        right: 0;
+        margin: auto;
+        transform: translatey(-50%);
         letter-spacing: 0.05em;
+        max-width: 960px;
+        z-index: 20;
     }
 
     &__txt {
@@ -36,10 +41,10 @@ c-slider
         height: 69px;
 
         &--03 {
-            padding: 0px 0 2px 11px;
+            padding: 0 0 2px 11px;
             letter-spacing: 0.14em;
             font-feature-settings: "palt" 1;
-            margin-top: 21px;
+            margin-top: 18px;
             line-height: 1.4;
         }
     }
@@ -120,8 +125,6 @@ c-slider
     }
 
     @include tab {
-        margin-top: 124px;
-
         &__text {
             font-size: 2.2rem;
             padding: 18px 0 21px;
@@ -138,7 +141,6 @@ c-slider
 
         &__title {
             font-size: 4rem;
-            top: -401px;
         }
 
         &__txt {
@@ -153,15 +155,12 @@ c-slider
     }
 
     @include sp {
-        margin-top: 61px;
-
         &__box {
             width: 94.7%;
         }
 
         &__title {
             font-size: 2.8rem;
-            left: 10px;
             letter-spacing: 0.01em;
         }
 

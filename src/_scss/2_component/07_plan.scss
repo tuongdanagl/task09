@@ -322,6 +322,7 @@ c-plan
 
     @include sp {
         padding: 33px 0 38px;
+        margin-bottom: 30px;
 
         &::before {
             width: 97.3%;
@@ -631,7 +632,6 @@ c-plan
     }
 
     @include sp {
-        padding-top: 30px;
 
         &::before {
             width: 97.3%;
